@@ -30,7 +30,7 @@ public class ConquestCampaign {
         return dayOfBattle;
     }
 
-    static boolean battleToBeContinue(int[][] battlefield) {
+    private static boolean battleToBeContinue(int[][] battlefield) {
         for (int[] row : battlefield) {
             for (int sector : row) {
                 if (sector == 0) {
@@ -42,7 +42,7 @@ public class ConquestCampaign {
         return false;
     }
 
-    static void landing(int[][] bf, int i, int j, int newDay) {
+    private static void landing(int[][] bf, int i, int j, int newDay) {
         if (i > 0 && bf[i - 1][j] == 0) {
             bf[i - 1][j] = newDay;
         }

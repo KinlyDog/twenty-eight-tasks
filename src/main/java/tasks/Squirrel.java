@@ -8,7 +8,7 @@ public class Squirrel {
                 .charAt(0);
     }
 
-    public static long factorial(int n) {
+    private static long factorial(int n) {
         if (n == 1) {
             return 1;
         }
