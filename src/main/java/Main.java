@@ -29,5 +29,11 @@ public class Main {
         System.out.println(
                 Arrays.toString(SynchronizingTables.synchronizingTables
                         (employeesId.length, employeesId, employeesSalary)));
+
+        // Ex. 6
+        int[] numbers = {1, 2, 3, 4, 5, 6, 2, 7, 8, 9};
+        int n = numbers.length;
+
+        System.out.println(PatternUnlock.patternUnlock(n, numbers));
     }
 }
