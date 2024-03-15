@@ -1,97 +1,41 @@
 package tasks;
 
-import java.util.Arrays;
-
 public class PatternUnlock {
     public static String patternUnlock(int n, int[] hits) {
 
-        int[][] rightTab = new int[3][3];
-        int x = 1;
+        String defaultSeq = "619528437";
+        StringBuilder correctSeq = new StringBuilder();
 
-        for (int i = 0; i < rightTab.length; i++) {
-            for (int j = 0; j < rightTab.length; j++) {
-                rightTab[i][j] = x++;
-            }
-        }
-
-
-        int[][] sourceTab = new int[3][3];
-
-        int one = 6;
-        int three = 9;
-
-        for (int i = 0; i < sourceTab.length; i++) {
-            for (int j = 0; j < sourceTab.length; j++) {
-                if (j == 0) {
-                    sourceTab[i][j] = one--;
-                }
-
-                if (j == 1) {
-                    sourceTab[i][j] = i + 1;
-                }
-
-                if (j == 2) {
-                    sourceTab[i][j] = three--;
-                }
-            }
-        }
-
-        int pos = 0;
-
-        StringBuilder builder = new StringBuilder();
-
-        boolean flag;
-
-        while (pos < n) {
-            flag = true;
-
-            for (int i = 0; i < sourceTab.length; i++) {
-                for (int j = 0; j < sourceTab.length; j++) {
-                    if (sourceTab[i][j] == hits[pos]) {
-                        builder.append(rightTab[i][j]);
-                        pos++;
-                        flag = false;
-                        break;
-                    }
-                }
-
-                if (!flag) {
+        for (int hit : hits) {
+            for (int j = 0; j < defaultSeq.length(); j++) {
+                if (String.valueOf(hit).equals(defaultSeq.charAt(j))) {
+                    correctSeq.append(j);
                     break;
                 }
             }
         }
 
-        char[] newUnlockCode = builder.toString().toCharArray();
+        double digitalCode = 0;
 
-        double result = 0;
+        for (int i = 1; i < correctSeq.length(); i++) {
+            int line = correctSeq.charAt(i - 1) + correctSeq.charAt(i);
 
-        final double SIDE = 1;
-        final double DIAGONAL = Math.sqrt(SIDE + SIDE);
-
-        for (int i = 0; i < n - 1; i++) {
-            int first = Character.getNumericValue(newUnlockCode[i]);
-            int second = Character.getNumericValue(newUnlockCode[i + 1]);
-
-            if ((first + second) % 2 == 0) {
-                result += DIAGONAL;
+            if (line % 2 == 0) {
+                digitalCode += Math.sqrt(2);
             } else {
-                result += SIDE;
+                digitalCode += 1;
             }
         }
 
-        double tmp = result * 100000;
+        int modifiedCode = (int)Math.round(digitalCode * 100000);
+        StringBuilder withoutZero = new StringBuilder(String.valueOf(modifiedCode));
 
-        int lol = (int)Math.round(tmp);
-        String st = String.valueOf(lol);
-
-        StringBuilder bld2 = new StringBuilder();
-
-        for (int i = 0; i < st.length(); i++) {
-            if (st.charAt(i) != '0') {
-                bld2.append(st.charAt(i));
+        for (int i = 0; i < withoutZero.length(); i++) {
+            if (withoutZero.charAt(i) == '0') {
+                withoutZero.deleteCharAt(i);
             }
         }
 
-        return bld2.toString();
+        return withoutZero.toString();
     }
 }
