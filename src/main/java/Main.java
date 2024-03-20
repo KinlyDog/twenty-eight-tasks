@@ -1,9 +1,11 @@
 import tasks.*;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
+        /*
         // Ex. 1
         System.out.println(Squirrel.squirrel(5));
 
@@ -35,5 +37,14 @@ public class Main {
         int n = numbers.length;
 
         System.out.println(PatternUnlock.patternUnlock(n, numbers));
+         */
+
+        // Ex. 7
+        String string = "1) строк разбивается на набор строк через выравнивание по заданной ширине.";
+        int[] result = WordSearch.wordSearch(12, string, "строк");
+
+        for (int i : result) {
+            System.out.print(i + " ");
+        }
     }
 }
