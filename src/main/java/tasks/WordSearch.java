@@ -4,10 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class WordSearch {
-    public static int[] wordSearch(int len, String s, String subs) {
-        // 1. Разбиваем строку на отдельные слова,
-        // а также слова выходящие за пределы необходимой длины.
-        // Получаем список слов нужной длины.
+    public static int[] wordSearch(int len, String s, String keyword) {
         ArrayList<String> wordsOfString = new ArrayList<>(List.of(s.split(" ")));
 
         for (int i = 0; i < wordsOfString.size(); i++) {
@@ -16,8 +13,7 @@ public class WordSearch {
             }
         }
 
-        // 2. Компонуем массив строк исходя из указанной длины
-        ArrayList<String> stringList = new ArrayList<>();
+        ArrayList<String> strings = new ArrayList<>();
         StringBuilder wordStorage = new StringBuilder();
 
         for (String string : wordsOfString) {
@@ -26,30 +22,30 @@ public class WordSearch {
                 continue;
             }
 
-            if (string.length() + wordStorage.length() <= len - 1) {
+            if (string.length() + wordStorage.length() < len) {
                 wordStorage.append(" ").append(string);
             } else {
-                stringList.add(wordStorage.toString());
+                strings.add(wordStorage.toString());
                 wordStorage.delete(0, wordStorage.length());
                 wordStorage.append(string);
             }
 
             if (string.equals(wordsOfString.getLast())) {
-                stringList.add(wordStorage.toString());
+                strings.add(wordStorage.toString());
             }
         }
 
-        return keyCheker(stringList, subs, stringList.size());
+        return keyChecker(strings, keyword);
     }
 
     private static String splitter(String string, int len) {
-        StringBuilder sb = new StringBuilder(string);
+        StringBuilder split = new StringBuilder(string);
 
-        for (int i = len; i < sb.length(); i += len) {
-            sb.insert(i++, " ");
+        for (int i = len; i < split.length(); i += len + 1) {
+            split.insert(i, " ");
         }
 
-        return sb.toString();
+        return split.toString();
     }
 
     private static void insertInList(ArrayList<String> list, int i, int len) {
@@ -61,39 +57,21 @@ public class WordSearch {
         }
     }
 
-    private static int[] keyCheker(ArrayList<String> strings, String subs, int len) {
-        int[] zeroOne = new int[len];
+    private static int[] keyChecker(ArrayList<String> strings, String keyWord) {
+        int[] zeroOne = new int[strings.size()];
 
-        for (int i = 0; i < len; i++) {
-            int indexOf = strings.get(i).indexOf(subs);
-            int lastIndexOF = strings.get(i).lastIndexOf(subs);
+        for (int i = 0; i < strings.size(); i++) {
             String st = strings.get(i);
-            int stLen = st.length();
 
-            if (!st.contains(subs)) {
+            if (!st.contains(keyWord)) {
                 continue;
             }
 
-            // вся строка искомое слово
-            if (st.equals(subs)) {
-                zeroOne[i] = 1;
-                continue;
-            }
+            boolean start = st.indexOf(keyWord + " ") == 0;
+            boolean mid = st.contains(" " + keyWord + " ");
+            boolean end = st.lastIndexOf(" " + keyWord) == st.length() - 1;
 
-            // слово в начале строки, а после пробел
-            if (indexOf == 0 && st.charAt(subs.length()) == ' ') {
-                zeroOne[i] = 1;
-                continue;
-            }
-
-            // слово в конце строки, а перед ним пробел
-            if (lastIndexOF == stLen - 1 && st.charAt(lastIndexOF - subs.length() + 1) == ' ') {
-                zeroOne[i] = 1;
-                continue;
-            }
-
-            // слово в середине строки ограниченое пробелами
-            if (indexOf > 0 && st.charAt(indexOf - 1) == ' ' && st.charAt(lastIndexOF + 1) == ' ') {
+            if (start || mid || end) {
                 zeroOne[i] = 1;
             }
         }
