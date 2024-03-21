@@ -40,7 +40,7 @@ public class Main {
          */
 
         // Ex. 7
-        String string = "1) строк разбивается на набор строк через выравнивание по заданной ширине.";
+        String string = "1) строка разбивается на набор строк через выравнивание по заданной ширине.";
         int[] result = WordSearch.wordSearch(12, string, "строк");
 
         for (int i : result) {

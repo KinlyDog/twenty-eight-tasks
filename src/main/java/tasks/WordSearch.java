@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class WordSearch {
-    public static int[] wordSearch(int len, String s, String keyword) {
-        ArrayList<String> wordsOfString = new ArrayList<>(List.of(s.split(" ")));
+    public static int[] wordSearch(int len, String string, String keyword) {
+        ArrayList<String> wordsOfString = new ArrayList<>(List.of(string.split(" ")));
 
         for (int i = 0; i < wordsOfString.size(); i++) {
             if (wordsOfString.get(i).length() > len) {
@@ -16,24 +16,22 @@ public class WordSearch {
         ArrayList<String> strings = new ArrayList<>();
         StringBuilder wordStorage = new StringBuilder();
 
-        for (String string : wordsOfString) {
+        for (String s : wordsOfString) {
             if (wordStorage.isEmpty()) {
-                wordStorage.append(string);
+                wordStorage.append(s);
                 continue;
             }
 
-            if (string.length() + wordStorage.length() < len) {
-                wordStorage.append(" ").append(string);
+            if (s.length() + wordStorage.length() < len) {
+                wordStorage.append(" ").append(s);
             } else {
                 strings.add(wordStorage.toString());
                 wordStorage.delete(0, wordStorage.length());
-                wordStorage.append(string);
-            }
-
-            if (string.equals(wordsOfString.getLast())) {
-                strings.add(wordStorage.toString());
+                wordStorage.append(s);
             }
         }
+
+        strings.add(wordStorage.toString());
 
         return keyChecker(strings, keyword);
     }
