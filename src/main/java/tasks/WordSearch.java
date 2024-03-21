@@ -70,7 +70,7 @@ public class WordSearch {
             boolean full = st.equals(keyWord);
             boolean start = st.indexOf(keyWord + " ") == 0;
             boolean mid = st.contains(" " + keyWord + " ");
-            boolean end = st.lastIndexOf(" " + keyWord) == st.length() - 1;
+            boolean end = st.lastIndexOf(" " + keyWord) == (st.length() - keyWord.length() - 1);
 
             if (full || start || mid || end) {
                 zeroOne[i] = 1;
