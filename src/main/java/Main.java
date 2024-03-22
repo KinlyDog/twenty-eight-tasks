@@ -37,7 +37,7 @@ public class Main {
         int n = numbers.length;
 
         System.out.println(PatternUnlock.patternUnlock(n, numbers));
-         */
+
 
         // Ex. 7
         String string = "1) строка разбивается на набор строк через выравнивание по заданной ширине.";
@@ -46,5 +46,13 @@ public class Main {
         for (int i : result) {
             System.out.print(i + " ");
         }
+
+         */
+
+        // Ex. 8
+        int[] ma = {5, -25, 10, -35, -45};
+        int n = ma.length;
+
+        System.out.println(SumOfThe.sumOfThe(n, ma));
     }
 }
