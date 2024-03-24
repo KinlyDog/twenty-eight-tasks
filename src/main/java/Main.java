@@ -56,10 +56,16 @@ public class Main {
         System.out.println(SumOfThe.sumOfThe(n, ma));
         */
 
-        // Ex. 9
-        String st = "отдай мою кроличью лапку";
-        String st2 = "омоюу толл дюиа акчп йрьк";
-        System.out.println(TheRabbitsFoot.theRabbitsFood(st, true));
-        System.out.println(TheRabbitsFoot.theRabbitsFood(st2, false));
+//        // Ex. 9
+//        String st = "отдай мою кроличью лапку";
+//        String st2 = "омоюу толл дюиа акчп йрьк";
+//        System.out.println(TheRabbitsFoot.theRabbitsFood(st, true));
+//        System.out.println(TheRabbitsFoot.theRabbitsFood(st2, false));
+
+        System.out.println("new version");
+        long sTime1 = System.currentTimeMillis();
+        ConquestCampaign.conquestCampaign(2000, 2000, 2, new int[]{2, 2, 50, 50, 2000, 2000});
+        long fTime1 = System.currentTimeMillis() - sTime1;
+        System.out.println(fTime1);
     }
 }

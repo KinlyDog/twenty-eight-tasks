@@ -43,19 +43,24 @@ public class ConquestCampaign {
     }
 
     private static void landing(int[][] bf, int i, int j, int newDay) {
-        if (i > 0 && bf[i - 1][j] == 0) {
+        boolean topIsEmpty = i > 0 && bf[i - 1][j] == 0;
+        boolean bottomIsEmpty = i < bf.length - 1 && bf[i + 1][j] == 0;
+        boolean leftIsEmpty = j > 0 && bf[i][j - 1] == 0;
+        boolean rightIsEmpty = j < bf[0].length - 1 && bf[i][j + 1] == 0;
+
+        if (topIsEmpty) {
             bf[i - 1][j] = newDay;
         }
 
-        if (i < bf.length - 1 && bf[i + 1][j] == 0) {
+        if (bottomIsEmpty) {
             bf[i + 1][j] = newDay;
         }
 
-        if (j > 0 && bf[i][j - 1] == 0) {
+        if (leftIsEmpty) {
             bf[i][j - 1] = newDay;
         }
 
-        if (j < bf[0].length - 1 && bf[i][j + 1] == 0) {
+        if (rightIsEmpty) {
             bf[i][j + 1] = newDay;
         }
     }
