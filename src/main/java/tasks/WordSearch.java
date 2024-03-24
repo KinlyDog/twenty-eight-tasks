@@ -56,7 +56,7 @@ public class WordSearch {
     }
 
     private static int[] keyChecker(ArrayList<String> strings, String keyWord) {
-        int[] zeroOne = new int[strings.size()];
+        int[] verificationKeys = new int[strings.size()];
 
         for (int i = 0; i < strings.size(); i++) {
             String st = strings.get(i);
@@ -71,10 +71,10 @@ public class WordSearch {
             boolean end = st.lastIndexOf(" " + keyWord) == (st.length() - keyWord.length() - 1);
 
             if (full || start || mid || end) {
-                zeroOne[i] = 1;
+                verificationKeys[i] = 1;
             }
         }
 
-        return zeroOne;
+        return verificationKeys;
     }
 }
