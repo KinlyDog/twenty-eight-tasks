@@ -32,12 +32,12 @@ public class TheRabbitsFoot {
     }
 
     private static String decoder(String defaultString) {
-        String[] ma = defaultString.split(" ");
-        char[][] matrix = new char[ma.length][ma[0].length()];
+        String[] strings = defaultString.split(" ");
+        char[][] matrix = new char[strings.length][strings[0].length()];
 
-        for (int i = 0; i < ma.length; i++) {
-            for (int j = 0; j < ma[i].length(); j++) {
-                matrix[i][j] = ma[i].charAt(j);
+        for (int i = 0; i < strings.length; i++) {
+            for (int j = 0; j < strings[i].length(); j++) {
+                matrix[i][j] = strings[i].charAt(j);
             }
         }
 
