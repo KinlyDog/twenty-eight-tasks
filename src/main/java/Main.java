@@ -47,12 +47,19 @@ public class Main {
             System.out.print(i + " ");
         }
 
-         */
+
 
         // Ex. 8
         int[] ma = {5, -25, 10, -35, -45};
         int n = ma.length;
 
         System.out.println(SumOfThe.sumOfThe(n, ma));
+        */
+
+        // Ex. 9
+        String st = "отдай мою кроличью лапку";
+        String st2 = "омоюу толл дюиа акчп йрьк";
+        System.out.println(TheRabbitsFoot.theRabbitsFood(st, true));
+        System.out.println(TheRabbitsFoot.theRabbitsFood(st2, false));
     }
 }
