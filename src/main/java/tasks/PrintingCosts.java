@@ -5,6 +5,7 @@ import java.util.HashMap;
 public class PrintingCosts {
 
     public static int printingCosts(String line) {
+        final int UNKNOWN_SYMBOL_COST = 23;
         String[] printerDocs = getPrinterDocs();
 
         char[] symbols = new char[printerDocs.length / 2 + 1];
@@ -19,7 +20,7 @@ public class PrintingCosts {
         int totalCost = 0;
 
         for (int i = 0; i < line.length(); i++) {
-            int id = 23;
+            int id = UNKNOWN_SYMBOL_COST;
 
             for (int j = 0; j < costs.length; j++) {
                 if (line.charAt(i) == symbols[j]) {
