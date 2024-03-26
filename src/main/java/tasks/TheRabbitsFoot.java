@@ -1,7 +1,7 @@
 package tasks;
 
 public class TheRabbitsFoot {
-    public static String theRabbitsFood(String s, boolean encode) {
+    public static String theRabbitsFoot(String s, boolean encode) {
         return encode ? encoder(s) : decoder(s);
     }
 
@@ -59,7 +59,6 @@ public class TheRabbitsFoot {
                 sb.append(" ");
             }
         }
-
 
         return sb.toString();
     }
