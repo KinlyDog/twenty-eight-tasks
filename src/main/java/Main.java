@@ -63,11 +63,11 @@ public class Main {
 //        System.out.println(TheRabbitsFoot.theRabbitsFood(st2, false));
 
         // Ex. 3 TEST
-//        System.out.println("new version");
-//        long sTime1 = System.currentTimeMillis();
-//        System.out.println(ConquestCampaign.conquestCampaign(1000, 1000, 1, new int[]{1, 1}));
-//        long fTime1 = System.currentTimeMillis() - sTime1;
-//        System.out.println(fTime1);
+        System.out.println("new version");
+        long sTime1 = System.currentTimeMillis();
+        System.out.println(ConquestCampaign.conquestCampaign(4, 4, 1, new int[]{2, 2}));
+        long fTime1 = System.currentTimeMillis() - sTime1;
+        System.out.println(fTime1);
 
         // Ex. 10
         PrintingCosts.printingCosts("123");

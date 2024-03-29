@@ -1,11 +1,13 @@
 
 ]
-java:S1220""Move this file to a named package.8¯Šú®ç1J$e0cc04bb-dfb8-45c4-ae81-88b9cfa041dc
+java:S1220""Move this file to a named package.8¯Šú®ç1J$3712836b-517b-4419-90ee-1a427e689dfe
+r	java:S106B"+Replace this use of System.out by a logger.(®Ç¤‘þÿÿÿÿ8¯´Þ×ç1J$9d2728ff-4c19-4196-aa68-4504f7bf2e1b
 ƒ	java:S125
-"<This block of commented-out lines of code should be removed.(™ÊÔÞùÿÿÿÿ8µŠú®ç1J$b0916582-b277-48ca-a8a3-ec3a51c99222
-ƒ	java:S125<"<This block of commented-out lines of code should be removed.(Ù©ÆÀûÿÿÿÿ8µŠú®ç1J$cfc5a45f-ecba-47dd-a610-78b34dbc462b
-}	java:S125B"<This block of commented-out lines of code should be removed.(¾¹@8µŠú®ç1J$e8d37f10-8343-49bd-8ade-c736932593d4
+"<This block of commented-out lines of code should be removed.(™ÊÔÞùÿÿÿÿ8µŠú®ç1J$7824c8a0-7b30-4dab-ae9f-3ac0bddf2a3c
+ƒ	java:S125<"<This block of commented-out lines of code should be removed.(Ù©ÆÀûÿÿÿÿ8µŠú®ç1J$074c336d-c0c1-4392-8e97-3bbdcba96852
+m	java:S106D"+Replace this use of System.out by a logger.(ÆÏ÷è8°´Þ×ç1J$2ac9f206-5900-4033-824f-a9fd547c3eda
+m	java:S106F"+Replace this use of System.out by a logger.(¦÷áÿ8°´Þ×ç1J$fb4f4e52-95f7-4a54-a3d6-6b9de5109c30
 s
-java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8¸Šú®ç1J$a788196a-049a-40e7-bf11-4851a8bf5a42
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8¸Šú®ç1J$ff3ad52d-8b0c-4650-981c-adf81827a581
 u
-java:S1128"-Remove this unused import 'java.util.Arrays'.(î–˜Éüÿÿÿÿ8¸Šú®ç1J$b7bb07c3-a19e-4f6e-b63f-32ad9de6476e
+java:S1128"-Remove this unused import 'java.util.Arrays'.(î–˜Éüÿÿÿÿ8¸Šú®ç1J$913ecc56-3aab-4ea9-86e5-0535ed3b8d85

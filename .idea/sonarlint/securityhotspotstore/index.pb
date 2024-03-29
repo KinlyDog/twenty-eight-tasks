@@ -24,8 +24,6 @@ W
 'src/main/java/tasks/TheRabbitsFoot.java,8\f\8ff016e125c7c1ca787616b0b1fcc3c879d3ff6d
 V
 &src/main/java/tasks/PrintingCosts.java,2\d\2d482ba75676aca9b23941b28dac7d6d73eb5a7a
-]
--src/main/java/tasks/ConquestCampaignMEGA.java,b\c\bca507d155c5ac9011d8eace78de68b95f52f110
 Å
 Q.idea/sonarlint/securityhotspotstore/6/6/66aa9a09b67378271948ba40244820aa6b59b044,4\e\4e0f97888f6eb7d6f5816d1a04eee038e24b0624
 Å
@@ -56,3 +54,5 @@ Q.idea/sonarlint/securityhotspotstore/e/4/e44a8606ce010ad9b89aafdfcee2ab49afbf6d
 Q.idea/sonarlint/securityhotspotstore/f/e/fea894daa44b57ab7a83d82dbc3f3e8ed781d77d,6\d\6d7c517791071ad77504a8fe4fd9a3245351ce0a
 Å
 Q.idea/sonarlint/securityhotspotstore/1/6/1601ddc46a965b84b63f12d659bf3854be9e09e8,6\3\637e30e7ad9c7720e543abdf13aada4c841eb922
+Q
+!src/main/java/tasks/BigMinus.java,9\d\9db336ac5455c01f637026d568476ea8d659e4d2
