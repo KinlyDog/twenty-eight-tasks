@@ -6,60 +6,62 @@ public class BigMinus {
             return "0";
         }
 
-        int[] s1num = new int[s1.length()];
-        int[] s2num = new int[s2.length()];
+        int[] minuend = reverseStringInDigit(s1);
+        int[] subtrahend = reverseStringInDigit(s2);
 
-        for (int i = 0; i < s1num.length; i++) {
-            s1num[i] = Character.getNumericValue(s1.charAt(s1num.length - 1 - i));
+        if (!isMaxValue(minuend, subtrahend)) {
+            int[] temp = minuend;
+
+            minuend = subtrahend;
+            subtrahend = temp;
         }
 
-        for (int i = 0; i < s2num.length; i++) {
-            s2num[i] = Character.getNumericValue(s2.charAt(s2num.length - 1 - i));
-        }
-
-        if (!isMaxValue(s1num, s2num)) {
-            int[] temp = s1num;
-
-            s1num = s2num;
-            s2num = temp;
-        }
-
-        for (int i = 0; i < s2num.length; i++) {
-            if (s1num[i] >= s2num[i]) {
-                s1num[i] -= s2num[i];
+        for (int i = 0; i < subtrahend.length; i++) {
+            if (minuend[i] >= subtrahend[i]) {
+                minuend[i] -= subtrahend[i];
                 continue;
             }
 
-            s1num[i + 1] -= 1;
-            s1num[i] += 10;
-            s1num[i] -= s2num[i];
+            minuend[i + 1] -= 1;
+            minuend[i] += 10;
+            minuend[i] -= subtrahend[i];
         }
 
-        for (int i = 0; i < s1num.length; i++) {
-            if (s1num[i] == -1) {
-                s1num[i + 1] -= 1;
-                s1num[i] += 10;
+        for (int i = 0; i < minuend.length; i++) {
+            if (minuend[i] == -1) {
+                minuend[i + 1] -= 1;
+                minuend[i] += 10;
             }
         }
 
-        return intToString(s1num);
+        return toString(minuend);
     }
 
-    private static boolean isMaxValue(int[] s1, int[] s2) {
-        if (s1.length > s2.length) {
+    private static int[] reverseStringInDigit(String string) {
+        int[] array = new int[string.length()];
+
+        for (int i = 0; i < array.length; i++) {
+            array[i] = Character.getNumericValue(string.charAt(array.length - 1 - i));
+        }
+
+        return array;
+    }
+
+    private static boolean isMaxValue(int[] minuend, int[] subtrahend) {
+        if (minuend.length > subtrahend.length) {
             return true;
         }
 
-        if (s1.length < s2.length) {
+        if (minuend.length < subtrahend.length) {
             return false;
         }
 
-        for (int i = s1.length - 1; i > -1; i--) {
-            if (s1[i] > s2[i]) {
+        for (int i = minuend.length - 1; i > -1; i--) {
+            if (minuend[i] > subtrahend[i]) {
                 return true;
             }
 
-            if (s1[i] < s2[i]) {
+            if (minuend[i] < subtrahend[i]) {
                 break;
             }
         }
@@ -67,17 +69,17 @@ public class BigMinus {
         return false;
     }
 
-    private static String intToString(int[] nums) {
+    private static String toString(int[] minuend) {
         boolean isZero = true;
         StringBuilder sb = new StringBuilder();
 
-        for (int i = nums.length - 1; i > -1; i--) {
-            if (isZero && nums[i] == 0) {
+        for (int i = minuend.length - 1; i > -1; i--) {
+            if (isZero && minuend[i] == 0) {
                 continue;
             }
 
             isZero = false;
-            sb.append(nums[i]);
+            sb.append(minuend[i]);
         }
 
         return sb.toString();
