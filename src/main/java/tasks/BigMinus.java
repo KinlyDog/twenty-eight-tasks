@@ -17,13 +17,11 @@ public class BigMinus {
         }
 
         for (int i = 0; i < subtrahend.length; i++) {
-            if (minuend[i] >= subtrahend[i]) {
-                minuend[i] -= subtrahend[i];
-                continue;
+            if (minuend[i] < subtrahend[i]) {
+                minuend[i + 1] -= 1;
+                minuend[i] += 10;
             }
 
-            minuend[i + 1] -= 1;
-            minuend[i] += 10;
             minuend[i] -= subtrahend[i];
         }
 
