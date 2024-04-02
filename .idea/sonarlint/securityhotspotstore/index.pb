@@ -56,3 +56,9 @@ Q.idea/sonarlint/securityhotspotstore/f/e/fea894daa44b57ab7a83d82dbc3f3e8ed781d7
 Q.idea/sonarlint/securityhotspotstore/1/6/1601ddc46a965b84b63f12d659bf3854be9e09e8,6\3\637e30e7ad9c7720e543abdf13aada4c841eb922
 Q
 !src/main/java/tasks/BigMinus.java,9\d\9db336ac5455c01f637026d568476ea8d659e4d2
+Q
+!src/main/java/tasks/MassVote.java,b\6\b600f3ba6e53e0301be648053db6aca68236a3be
+U
+%src/test/java/tasks/MassVoteTest.java,9\2\9210ebf78c1a84f7d94857e3fe20d9dac67889c5
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
