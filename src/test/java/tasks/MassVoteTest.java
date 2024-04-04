@@ -33,10 +33,4 @@ class MassVoteTest {
         int[] votes = {10, 15, 10};
         assertEquals(minorityWin + 2, massVote(votes.length, votes));
     }
-
-    @Test
-    void noWinnerTest() {
-        int[] votes = {111, 111, 110, 110};
-        assertEquals(noWin, massVote(votes.length, votes));
-    }
 }

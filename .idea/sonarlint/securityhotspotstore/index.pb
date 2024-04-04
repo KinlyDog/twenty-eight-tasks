@@ -62,3 +62,7 @@ U
 %src/test/java/tasks/MassVoteTest.java,9\2\9210ebf78c1a84f7d94857e3fe20d9dac67889c5
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
+L
+src/main/java/tasks/UFO.java,c\9\c90546eaaf3845e775c6edb7f9edcd7854412ae2
+P
+ src/test/java/tasks/UFOTest.java,9\9\99176ec572fbd07df4cd81f2ba88da74b5bcc003
