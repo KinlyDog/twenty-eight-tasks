@@ -7,10 +7,10 @@ public class Unmanned {
         }
 
         int trafficLightNum = 0;
-        int travelTime = track[0][0];
+        int interval = track[0][0];
+        int travelTime = interval;
 
-        int interval = 0;
-        for (int i = travelTime; i <= distance; i += interval) {
+        for (int i = interval; i <= distance; i += interval) {
             travelTime += stopTime(track[trafficLightNum], travelTime);
 
             if (++trafficLightNum >= n) {
@@ -24,18 +24,18 @@ public class Unmanned {
         return travelTime;
     }
 
-    private static int stopTime(int[] light, int travelTime) {
-        int red = light[1];
-        int green = light[2];
+    private static int stopTime(int[] trafficLight, int travelTime) {
+        int redTime = trafficLight[1];
+        int greenTime = trafficLight[2];
 
-        int sum = red + green;
+        int fullTime = redTime + greenTime;
 
-        if (travelTime > sum) {
-            travelTime %= sum;
+        if (travelTime > fullTime) {
+            travelTime %= fullTime;
         }
 
-        if (travelTime < red) {
-            return red - travelTime;
+        if (travelTime < redTime) {
+            return redTime - travelTime;
         }
 
         return 0;
