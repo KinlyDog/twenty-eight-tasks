@@ -66,3 +66,7 @@ L
 src/main/java/tasks/UFO.java,c\9\c90546eaaf3845e775c6edb7f9edcd7854412ae2
 P
  src/test/java/tasks/UFOTest.java,9\9\99176ec572fbd07df4cd81f2ba88da74b5bcc003
+Q
+!src/main/java/tasks/Unmanned.java,6\a\6a3510065fa9cc18e24842121c6ede7db8146a51
+U
+%src/test/java/tasks/UnmannedTest.java,f\1\f15f828b746e5a7e7318c491a91617635dd2cb78
