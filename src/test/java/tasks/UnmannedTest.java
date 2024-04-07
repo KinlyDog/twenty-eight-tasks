@@ -5,10 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import static tasks.Unmanned.unmanned;
 
-import tasks.Unmanned;
-
 class UnmannedTest {
-
     @Test
     void test0() {
         int track = 10;
@@ -57,9 +54,10 @@ class UnmannedTest {
         assertEquals(11, unmanned(track, count, tl));
     }
 
+    @Test
     void test4() {
         int track = 10;
-        int count = 5;
+        int count = 4;
         int[][] tl = {
                 {3, 5, 5},
                 {5, 2, 2},
@@ -67,6 +65,6 @@ class UnmannedTest {
                 {8, 3, 2}
         };
 
-        assertEquals(14, unmanned(track, count, tl));
+        assertEquals(15, unmanned(track, count, tl));
     }
 }
