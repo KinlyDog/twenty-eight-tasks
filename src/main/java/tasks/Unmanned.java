@@ -2,7 +2,7 @@ package tasks;
 
 public class Unmanned {
     public static int unmanned(int distance, int n, int[][] track) {
-        if (n < 0) {
+        if (n < 1) {
             return distance;
         }
 
