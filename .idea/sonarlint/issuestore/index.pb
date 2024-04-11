@@ -78,3 +78,7 @@ X
 (src/main/java/tasks/MaximumDiscount.java,9\9\992a05460a7fdb8af0440c5ae7251d2978bb9330
 \
 ,src/test/java/tasks/MaximumDiscountTest.java,a\3\a3b0e990e498533ae5e60e4e574fc719d37bd0c3
+U
+%src/main/java/tasks/LineAnalysis.java,9\c\9cbda11a12de6822c92e0715da4a5d96db3ab090
+Y
+)src/test/java/tasks/LineAnalysisTest.java,a\5\a559346529e132a0e3ba09d7eb3e5e6546ce0dba
