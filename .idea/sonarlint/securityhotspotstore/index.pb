@@ -74,3 +74,7 @@ Q
 !src/main/java/tasks/TankRush.java,f\a\fab5b01b190d3eb72229da3f602b67cc0a7b7f1c
 U
 %src/test/java/tasks/TankRushTest.java,d\e\de44ae5e36a4fc665b1cab160bd4ae9f0f7a0ab0
+X
+(src/main/java/tasks/MaximumDiscount.java,9\9\992a05460a7fdb8af0440c5ae7251d2978bb9330
+\
+,src/test/java/tasks/MaximumDiscountTest.java,a\3\a3b0e990e498533ae5e60e4e574fc719d37bd0c3
