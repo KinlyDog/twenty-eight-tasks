@@ -14,11 +14,11 @@ class TankRushTest {
 
     @Test
     void difficultConditionTest() {
-        assertTrue(tankRush(3, 6, "123434 234598 0987", 2, 2, "34 98"));
+        assertTrue(tankRush(3, 5, "1234 3434 3298", 2, 2, "34 98"));
     }
 
     @Test
     void smallerThanTest() {
-        assertFalse(tankRush(2, 2, "123434 234598 0987", 3, 3, "34 98"));
+        assertFalse(tankRush(2, 2, "12 12", 3, 3, "34 98"));
     }
 }
