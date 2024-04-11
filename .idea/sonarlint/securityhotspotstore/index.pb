@@ -70,3 +70,7 @@ Q
 !src/main/java/tasks/Unmanned.java,6\a\6a3510065fa9cc18e24842121c6ede7db8146a51
 U
 %src/test/java/tasks/UnmannedTest.java,f\1\f15f828b746e5a7e7318c491a91617635dd2cb78
+Q
+!src/main/java/tasks/TankRush.java,f\a\fab5b01b190d3eb72229da3f602b67cc0a7b7f1c
+U
+%src/test/java/tasks/TankRushTest.java,d\e\de44ae5e36a4fc665b1cab160bd4ae9f0f7a0ab0
