@@ -19,7 +19,7 @@ public class TankRush {
                     break;
                 }
 
-                if (massivePenetrator(map, groupOfTanks, i, entry)) {
+                if (isHit(map, groupOfTanks, i, entry)) {
                     return true;
                 }
 
@@ -30,7 +30,7 @@ public class TankRush {
         return false;
     }
 
-    private static boolean massivePenetrator(String[] map, String[] groupOfTanks, int line, int position) {
+    private static boolean isHit(String[] map, String[] groupOfTanks, int line, int position) {
 
         for (String s : groupOfTanks) {
             String st = map[line++].substring(position, position + groupOfTanks.length);
