@@ -7,7 +7,7 @@ import static tasks.Unmanned.unmanned;
 
 class UnmannedTest {
     @Test
-    void test0() {
+    void oneTrafficLight() {
         int track = 10;
         int count = 1;
         int[][] tl = {
@@ -17,9 +17,19 @@ class UnmannedTest {
         assertEquals(10, unmanned(track, count, tl));
     }
 
+    @Test
+    void oneTrafficLight2() {
+        int track = 10;
+        int count = 1;
+        int[][] tl = {
+                {5, 2, 2}
+        };
+
+        assertEquals(11, unmanned(track, count, tl));
+    }
 
     @Test
-    void test1() {
+    void twoTrafficLight() {
         int track = 10;
         int count = 2;
         int[][] tl = {
@@ -31,7 +41,7 @@ class UnmannedTest {
     }
 
     @Test
-    void test2() {
+    void threeTrafficLight() {
         int track = 10;
         int count = 3;
         int[][] tl = {
@@ -44,18 +54,7 @@ class UnmannedTest {
     }
 
     @Test
-    void test3() {
-        int track = 10;
-        int count = 1;
-        int[][] tl = {
-                {5, 2, 2}
-        };
-
-        assertEquals(11, unmanned(track, count, tl));
-    }
-
-    @Test
-    void test4() {
+    void fourTrafficLight() {
         int track = 10;
         int count = 4;
         int[][] tl = {
@@ -66,5 +65,23 @@ class UnmannedTest {
         };
 
         assertEquals(15, unmanned(track, count, tl));
+    }
+
+    @Test
+    void zeroTrafficLight() {
+        int track = 10;
+        int count = 0;
+        int[][] tl = new int[0][0];
+
+        assertEquals(10, unmanned(track, count, tl));
+    }
+
+    @Test
+    void zeroTrafficLightFalse() {
+        int track = Integer.MAX_VALUE;
+        int count = 0;
+        int[][] tl = new int[0][0];
+
+        assertNotEquals(0, unmanned(track, count, tl));
     }
 }
