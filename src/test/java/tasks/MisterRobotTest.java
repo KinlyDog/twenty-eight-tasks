@@ -33,7 +33,7 @@ class MisterRobotTest {
     void megaTest() {
         Random rand = new Random();
 
-        int len = 100_00;
+        int len = 50_000;
 
         int[] array = new int [len];
 
