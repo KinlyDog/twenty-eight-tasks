@@ -4,12 +4,8 @@ import java.util.Arrays;
 
 public class MisterRobot {
     public static boolean misterRobot(int n, int[] data) {
-        if (n < 1) {
+        if (n < 5) {
             return false;
-        }
-
-        if (n == 1) {
-            return true;
         }
 
         int[] sData = Arrays.copyOf(data, n);
