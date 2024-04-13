@@ -1,60 +1,61 @@
 package tasks;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class ShopOLAP {
     public static String[] shopOLAP(int n, String[] items) {
-        HashMap<String, Integer> hm = new HashMap<>();
+        ArrayList<String> products = new ArrayList<>();
+        ArrayList<Integer> quantity = new ArrayList<>();
 
-        for (String st : items) {
-            String[] itemsTemp = st.split(" ");
-            String name = itemsTemp[0];
-            int count = Integer.parseInt(itemsTemp[1]);
+        for (String string : items) {
+            String[] itemsSplit = string.split(" ");
 
-            if (!hm.containsKey(name)) {
-                hm.put(name, count);
+            String product = itemsSplit[0];
+            int quantum = Integer.parseInt(itemsSplit[1]);
+
+            int position = products.indexOf(product);
+
+            if (position < 0) {
+                products.add(product);
+                quantity.add(quantum);
             } else {
-                hm.replace(name, hm.get(name) + count);
+                quantity.set(position, quantity.get(position) + quantum);
             }
         }
 
-        ArrayList<String> itemsTemp = new ArrayList<>(hm.keySet());
-        ArrayList<Integer> count = new ArrayList<>(hm.values());
+        sorting(products, quantity);
 
-        sorting(itemsTemp, count);
+        String[] result = new String[quantity.size()];
 
-        String[] result = new String[count.size()];
-
-        for (int i = 0; i < itemsTemp.size(); i++) {
-            result[i] = itemsTemp.get(i) + " " + count.get(i);
+        for (int i = 0; i < products.size(); i++) {
+            result[i] = products.get(i) + " " + quantity.get(i);
         }
 
         return result;
     }
 
-    private static void sorting(ArrayList<String> items, ArrayList<Integer> count) {
+    private static void sorting(ArrayList<String> products, ArrayList<Integer> quantity) {
         boolean isSorted = true;
 
         while (isSorted) {
             isSorted = false;
 
-            for (int i = 0; i < count.size() - 1; i++) {
-                if (count.get(i) > count.get(i + 1)) {
+            for (int i = 0; i < products.size() - 1; i++) {
+                if (quantity.get(i) > quantity.get(i + 1)) {
                     continue;
                 }
 
-                int firstCount = count.get(i);
-                int secondCount = count.get(i + 1);
-                String firstItem = items.get(i);
-                String secondItem = items.get(i + 1);
+                int quantum = quantity.get(i);
+                int quantumNext = quantity.get(i + 1);
+                String product = products.get(i);
+                String productNext = products.get(i + 1);
 
-                if (firstCount < secondCount || firstItem.compareTo(secondItem) > 0) {
-                    count.set(i, secondCount);
-                    count.set(i + 1, firstCount);
+                if (quantum < quantumNext || product.compareTo(productNext) > 0) {
+                    quantity.set(i, quantumNext);
+                    quantity.set(i + 1, quantum);
 
-                    items.set(i, secondItem);
-                    items.set(i + 1, firstItem);
+                    products.set(i, productNext);
+                    products.set(i + 1, product);
 
                     isSorted = true;
                 }
