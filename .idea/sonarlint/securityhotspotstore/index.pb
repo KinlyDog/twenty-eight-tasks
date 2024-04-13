@@ -86,3 +86,7 @@ T
 $src/main/java/tasks/MisterRobot.java,6\0\605ff21c50932ca23ce05d8a2f5319d478403e60
 X
 (src/test/java/tasks/MisterRobotTest.java,f\7\f72df63e814e5e426f59233fd6b931f5a5e1debc
+Q
+!src/main/java/tasks/ShopOLAP.java,5\9\59c68d1821c594c9b7452a739abc8ebbe5628eff
+U
+%src/test/java/tasks/ShopOLAPTest.java,6\0\605b76791c922b45f75055e2e7fb010e9ef9b5ae
