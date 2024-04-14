@@ -90,7 +90,5 @@ Q
 !src/main/java/tasks/ShopOLAP.java,5\9\59c68d1821c594c9b7452a739abc8ebbe5628eff
 U
 %src/test/java/tasks/ShopOLAPTest.java,6\0\605b76791c922b45f75055e2e7fb010e9ef9b5ae
-P
- src/main/java/tasks/Sorting.java,5\c\5c2277d8be84c5033e297ff241bda45fd8279702
-T
-$src/test/java/tasks/SortingTest.java,a\6\a66039a5d3e46c982f8ca69772a9f378613463ff
+Q
+!src/main/java/tasks/BastShoe.java,5\b\5bd1154784b48427192867fce2683bce5e52682a
