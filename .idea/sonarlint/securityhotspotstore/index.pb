@@ -92,3 +92,5 @@ U
 %src/test/java/tasks/ShopOLAPTest.java,6\0\605b76791c922b45f75055e2e7fb010e9ef9b5ae
 Q
 !src/main/java/tasks/BastShoe.java,5\b\5bd1154784b48427192867fce2683bce5e52682a
+U
+%src/test/java/tasks/BastShoeTest.java,f\0\f0c2967102d1dce6c7b4b77f88bfa440102d68d9
