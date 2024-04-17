@@ -94,3 +94,7 @@ Q
 !src/main/java/tasks/BastShoe.java,5\b\5bd1154784b48427192867fce2683bce5e52682a
 U
 %src/test/java/tasks/BastShoeTest.java,f\0\f0c2967102d1dce6c7b4b77f88bfa440102d68d9
+V
+&src/main/java/tasks/BiggerGreater.java,0\e\0e7cf0e6f911a66617bac92026eae6abcc84a25f
+Z
+*src/test/java/tasks/BiggerGreaterTest.java,6\6\66d8abb6fe4d729a02d5845699e97f0ff87ca863
