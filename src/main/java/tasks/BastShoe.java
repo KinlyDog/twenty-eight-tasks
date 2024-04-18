@@ -3,10 +3,10 @@ package tasks;
 import java.util.ArrayList;
 
 public class BastShoe {
-    static String string = "";
-    static ArrayList<String> list = new ArrayList<>();
-    static int index = -1;
-    static boolean undo;
+    private static String string = "";
+    private static ArrayList<String> list = new ArrayList<>();
+    private static int index = -1;
+    private static boolean undo;
 
     public static String bastShoe(String command) {
         if (validationFailed(command)) {
