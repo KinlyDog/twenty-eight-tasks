@@ -6,7 +6,14 @@ public class BastShoe {
     private static String string = "";
     private static ArrayList<String> list = new ArrayList<>();
     private static int index = -1;
-    private static boolean undo;
+    private static boolean undo = false;
+
+    public static void prepareForTests() {
+        BastShoe.string = "";
+        BastShoe.list = new ArrayList<>();
+        BastShoe.index = -1;
+        BastShoe.undo = false;
+    }
 
     public static String bastShoe(String command) {
         if (validationFailed(command)) {

@@ -1,11 +1,7 @@
 package tasks;
 
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestMethodOrder;
-
-import java.util.Scanner;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static tasks.BastShoe.*;
@@ -14,10 +10,7 @@ class BastShoeTest {
 
     @BeforeEach
     void prepare() {
-        string = "";
-        list.clear();
-        index = -1;
-        undo = false;
+        prepareForTests();
     }
 
     @Test
