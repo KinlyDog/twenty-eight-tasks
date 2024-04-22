@@ -1,5 +1,7 @@
 package tasks;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 
 public class SherlockValidString {
@@ -16,7 +18,7 @@ public class SherlockValidString {
                 charGrouping.merge(s.charAt(j), 1, Integer::sum);
             }
 
-            if (validationCheck(charGrouping)) {
+            if (validationCheck(charGrouping.values())) {
                 return true;
             }
         }
@@ -24,13 +26,15 @@ public class SherlockValidString {
         return false;
     }
 
-    private static boolean validationCheck(HashMap<Character, Integer> charGrouping) {
-        HashMap<Integer, Integer> hm = new HashMap<>();
+    private static boolean validationCheck(Collection<Integer> collection) {
+        ArrayList<Integer> list = new ArrayList<>(collection);
 
-        for (Integer i : charGrouping.values()) {
-            hm.merge(i, 1, Integer::sum);
+        for (int i = 0; i < list.size() - 1; i++) {
+            if (!list.get(i).equals(list.get(i + 1))) {
+                return false;
+            }
         }
 
-        return (hm.size() == 1);
+        return true;
     }
 }
