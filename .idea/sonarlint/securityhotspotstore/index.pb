@@ -98,3 +98,7 @@ V
 &src/main/java/tasks/BiggerGreater.java,0\e\0e7cf0e6f911a66617bac92026eae6abcc84a25f
 Z
 *src/test/java/tasks/BiggerGreaterTest.java,6\6\66d8abb6fe4d729a02d5845699e97f0ff87ca863
+\
+,src/main/java/tasks/SherlockValidString.java,4\f\4fd9a056f5179762287dbde5eca09cc24dbb670e
+`
+0src/test/java/tasks/SherlockValidStringTest.java,3\e\3ef378bb13bd367dcf08480ff76d00db9c668129
