@@ -102,3 +102,7 @@ Z
 ,src/main/java/tasks/SherlockValidString.java,4\f\4fd9a056f5179762287dbde5eca09cc24dbb670e
 `
 0src/test/java/tasks/SherlockValidStringTest.java,3\e\3ef378bb13bd367dcf08480ff76d00db9c668129
+S
+#src/main/java/tasks/TreeOfLife.java,8\b\8bae55e0d61a2e13defa04bb0eebc110b39ef090
+W
+'src/test/java/tasks/TreeOfLifeTest.java,f\6\f63a96390e2b034ea5eaebc9392011dbce17b3cf
