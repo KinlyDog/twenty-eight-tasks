@@ -9,8 +9,23 @@ class TreeOfLifeTest {
 
 
     @Test
-    void test() {
-        treeOfLife(3, 4, 12, new String[]{".+..", "..+.", ".+.."});
+    void test0() {
+        String[] st = {".+..", "..+.", ".+.."};
+
+        assertArrayEquals(st, treeOfLife(3, 4, 4, new String[]{".+..", "..+.", ".+.."}));
     }
 
+    @Test
+    void test1() {
+        String[] st = {"++++", "++++", "++++"};
+
+        assertArrayEquals(st, treeOfLife(3, 4, 1, new String[]{".+..", "..+.", ".+.."}));
+    }
+
+    @Test
+    void test2() {
+        String[] st = {".+..", "..+.", ".+.."};
+
+        assertArrayEquals(st, treeOfLife(3, 4, 0, new String[]{".+..", "..+.", ".+.."}));
+    }
 }
