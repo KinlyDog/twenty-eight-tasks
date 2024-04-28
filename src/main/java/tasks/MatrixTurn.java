@@ -1,108 +1,97 @@
 package tasks;
 
 public class MatrixTurn {
-    public static void matrixTurn(String[] matrix, int m, int n, int t) {
-        String[] stringMatrix = new String[m / 2];
+    public static void matrixTurn(String[] matrix, int numOfLines, int numOfColumns, int rotationStep) {
+        int unfoldedMatrixSize = Math.min(numOfLines, numOfColumns) / 2;
 
-        stringMatrix = matrixToString(matrix, m, n, stringMatrix);
-        stringMatrix = lineShifter(stringMatrix, t);
+        String[] unfoldedMatrix = matrixUnfolding(matrix, numOfLines, numOfColumns, unfoldedMatrixSize);
+        rotation(unfoldedMatrix, rotationStep);
 
-        char[][] chartrix = replaceMatrix(stringMatrix, m, n);
+        char[][] charMatrix = collapseMatrix(unfoldedMatrix, numOfLines, numOfColumns, unfoldedMatrixSize);
 
-        for (int i = 0; i < chartrix.length; i++) {
+        for (int i = 0; i < charMatrix.length; i++) {
+             matrix[i] = new String(charMatrix[i]);
+        }
+    }
+
+    private static String[] matrixUnfolding(String[] matrix, int numOfLines, int numOfColumns, int unfoldedMatrixSize) {
+        String[] unfoldedMatrix = new String[unfoldedMatrixSize];
+        int i = 0;
+
+        while (i < unfoldedMatrixSize) {
+            StringBuilder sbMain = new StringBuilder();
             StringBuilder sb = new StringBuilder();
 
-            for (int j = 0; j < chartrix[i].length; j++) {
-                sb.append(chartrix[i][j]);
+            int column = numOfColumns - 1 - i;
+            int line = numOfLines - 1 - i;
+
+            sbMain.append(matrix[i].substring(i, column));
+
+            for (int j = i; j < line; j++) {
+                sbMain.append(matrix[j].charAt(column));
             }
 
-            matrix[i] = sb.toString();
-        }
-    }
+            sb.append(matrix[line].substring(i + 1, column + 1)).reverse();
+            sbMain.append(sb);
 
-    private static char[][] replaceMatrix(String[] stringMatrix, int m, int n) {
-        char[][] chartrix = new char[m][n];
-
-        int u = 0;
-
-        while (u < Math.min(m, n) / 2) {
-            int ind = 0;
-
-            int a = n - 1 - u;
-            int b = m - 1 - u;
-
-            for (int i = 0 + u; i < a; i++, ind++) {
-                chartrix[u][i] = stringMatrix[u].charAt(ind);
+            for (int j = line; j > i; j--) {
+                sbMain.append(matrix[j].charAt(i));
             }
 
-            for (int i = 0 + u; i < b; i++, ind++) {
-                chartrix[i][a] = stringMatrix[u].charAt(ind);
-            }
-
-            for (int i = a; i > 0 + u; i--, ind++) {
-                chartrix[b][i] = stringMatrix[u].charAt(ind);
-            }
-
-            for (int i = b; i > 0 + u; i--, ind++) {
-                chartrix[i][u] = stringMatrix[u].charAt(ind);
-            }
-
-            u++;
+            unfoldedMatrix[i] = sbMain.toString();
+            i++;
         }
 
-        return chartrix;
+        return unfoldedMatrix;
     }
 
-    private static String[] matrixToString(String[] matrix, int m, int n, String[] stringMatrix) {
-        int u = 0;
+    private static char[][] collapseMatrix(String[] unfoldedMatrix, int numOfLines, int numOfColumns, int size) {
+        char[][] charMatrix = new char[numOfLines][numOfColumns];
 
-        while (u < Math.min(m, n) / 2) {
-            StringBuilder sb = new StringBuilder();
+        int i = 0;
 
-            int a = matrix[0].length() - 1 - u;
-            int b = matrix.length - 1 - u;
+        while (i < size) {
+            int posOfChar = 0;
 
-            for (int i = 0 + u; i < a; i++) {
-                sb.append(matrix[u].charAt(i));
+            int column = numOfColumns - 1 - i;
+            int line = numOfLines - 1 - i;
+
+            for (int j = i; j < column; j++, posOfChar++) {
+                charMatrix[i][j] = unfoldedMatrix[i].charAt(posOfChar);
             }
 
-            for (int i = 0 + u; i < b; i++) {
-                sb.append(matrix[i].charAt(a));
+            for (int j = i; j < line; j++, posOfChar++) {
+                charMatrix[j][column] = unfoldedMatrix[i].charAt(posOfChar);
             }
 
-            for (int i = a; i > 0 + u; i--) {
-                sb.append(matrix[b].charAt(i));
+            for (int j = column; j > i; j--, posOfChar++) {
+                charMatrix[line][j] = unfoldedMatrix[i].charAt(posOfChar);
             }
 
-            for (int i = b; i > 0 + u; i--) {
-                sb.append(matrix[i].charAt(u));
+            for (int j = line; j > i; j--, posOfChar++) {
+                charMatrix[j][i] = unfoldedMatrix[i].charAt(posOfChar);
             }
 
-            stringMatrix[u] = sb.toString();
-            u++;
+            i++;
         }
 
-        return stringMatrix;
+        return charMatrix;
     }
 
-    private static String[] lineShifter(String[] strings, int offsetDistance) {
-        String[] offsetLines = new String[strings.length];
-
+    private static void rotation(String[] strings, int rotationStep) {
         for (int i = 0; i < strings.length; i++) {
             int stringLen = strings[i].length();
 
-            if (offsetDistance >= stringLen) {
-                offsetDistance %= stringLen;
+            if (rotationStep >= stringLen) {
+                rotationStep %= stringLen;
             }
 
             StringBuilder sb = new StringBuilder();
 
-            sb.append(strings[i].substring(stringLen - offsetDistance));
-            sb.append(strings[i].substring(0, stringLen - offsetDistance));
+            sb.append(strings[i].substring(stringLen - rotationStep));
+            sb.append(strings[i].substring(0, stringLen - rotationStep));
 
-            offsetLines[i] = sb.toString();
+            strings[i] = sb.toString();
         }
-
-        return offsetLines;
     }
 }
