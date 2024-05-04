@@ -118,3 +118,7 @@ U
 %src/main/java/tasks/WhiteWalkers.java,c\3\c377545488c04a8bedbfbdded23777fcde4eb556
 Y
 )src/test/java/tasks/WhiteWalkersTest.java,f\2\f2319f4fc70685a8e1fc37fea528f0b67ece28bb
+Q
+!src/main/java/tasks/Football.java,9\9\9945fe5d8666b5f5d06e8b446097120ad4ea9ec0
+U
+%src/test/java/tasks/FootballTest.java,c\3\c312833b38304b234360fbc7f45d8e7f42743552
