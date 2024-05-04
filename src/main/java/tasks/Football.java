@@ -3,22 +3,22 @@ package tasks;
 import java.util.Arrays;
 
 public class Football {
-    public static boolean football(int[] standart, int n) {
-        int[] sorted = Arrays.copyOf(standart, n);
+    public static boolean football(int[] source, int n) {
+        int[] sorted = Arrays.copyOf(source, n);
         Arrays.sort(sorted);
 
-        if (Arrays.equals(standart, sorted)) {
+        if (Arrays.equals(source, sorted)) {
             return true;
         }
 
-        return moveSort(standart, sorted, n) || reversalSort(standart, sorted, n);
+        return moveSort(source, sorted, n) || reversalSort(source, sorted, n);
     }
 
-    private static boolean moveSort(int[] standart, int[] sorted, int n) {
+    private static boolean moveSort(int[] source, int[] sorted, int n) {
         int difference = 0;
 
         for (int i = 0; i < n; i++) {
-            if (standart[i] != sorted[i]) {
+            if (source[i] != sorted[i]) {
                 difference++;
             }
         }
@@ -26,33 +26,37 @@ public class Football {
         return difference == 2;
     }
 
-    private static boolean reversalSort(int[] standart, int[] sorted, int n) {
-        int[] ma = Arrays.copyOf(standart, n);
+    private static boolean reversalSort(int[] source, int[] sorted, int n) {
+        int[] copyOfSource = Arrays.copyOf(source, n);
 
         int start = 0;
         int end = 0;
 
         for (int i = 0; i < n; i++) {
-            if (standart[i] != sorted[i]) {
+            if (source[i] != sorted[i]) {
                 start = i;
                 break;
             }
         }
 
         for (int i = n - 1; i > -1; i--) {
-            if (standart[i] != sorted[i]) {
+            if (source[i] != sorted[i]) {
                 end = i;
                 break;
             }
         }
 
+        reverseArray(source, start, end);
+
+        return Arrays.equals(copyOfSource, sorted);
+    }
+
+    private static void reverseArray(int[] source, int start, int end) {
         for (int i = 0; i < (end - start) / 2; i++) {
-            int temp = ma[start + i];
+            int temp = source[start + i];
 
-            ma[start + i] = ma[end - i];
-            ma[end - i] = temp;
+            source[start + i] = source[end - i];
+            source[end - i] = temp;
         }
-
-        return Arrays.equals(ma, sorted);
     }
 }
