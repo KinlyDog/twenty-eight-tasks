@@ -63,21 +63,23 @@ public class Main {
 //        System.out.println(TheRabbitsFoot.theRabbitsFood(st, true));
 //        System.out.println(TheRabbitsFoot.theRabbitsFood(st2, false));
 
-        // Ex. 3 TEST
-        System.out.println("new version");
-        long sTime1 = System.currentTimeMillis();
-        System.out.println(ConquestCampaign.conquestCampaign(4, 4, 1, new int[]{2, 2}));
-        long fTime1 = System.currentTimeMillis() - sTime1;
-        System.out.println(fTime1);
+//        // Ex. 3 TEST
+//        System.out.println("new version");
+//        long sTime1 = System.currentTimeMillis();
+//        System.out.println(ConquestCampaign.conquestCampaign(4, 4, 1, new int[]{2, 2}));
+//        long fTime1 = System.currentTimeMillis() - sTime1;
+//        System.out.println(fTime1);
+//
+//        // Ex. 10
+//        PrintingCosts.printingCosts("123");
+//
+//        HashSet<Integer> hs = new HashSet<>();
+//        hs.add(1);
+//        hs.add(2);
+//        hs.add(1);
+//
+//        System.out.println(Arrays.toString(hs.toArray()));
 
-        // Ex. 10
-        PrintingCosts.printingCosts("123");
-
-        HashSet<Integer> hs = new HashSet<>();
-        hs.add(1);
-        hs.add(2);
-        hs.add(1);
-
-        System.out.println(Arrays.toString(hs.toArray()));
+        System.out.println(Character.getNumericValue(47));
     }
 }

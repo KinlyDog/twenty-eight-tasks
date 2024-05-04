@@ -114,3 +114,7 @@ W
 +src/main/java/tasks/TransformTransform.java,a\d\ade3cbcd1564cbeaf9eddea57f70e913e43a3a97
 _
 /src/test/java/tasks/TransformTransformTest.java,5\c\5c787c7eb154bf15a4fe2962a3705d32ac29fc7e
+U
+%src/main/java/tasks/WhiteWalkers.java,c\3\c377545488c04a8bedbfbdded23777fcde4eb556
+Y
+)src/test/java/tasks/WhiteWalkersTest.java,f\2\f2319f4fc70685a8e1fc37fea528f0b67ece28bb
