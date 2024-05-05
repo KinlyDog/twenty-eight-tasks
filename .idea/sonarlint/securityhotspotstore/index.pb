@@ -122,3 +122,7 @@ Q
 !src/main/java/tasks/Football.java,9\9\9945fe5d8666b5f5d06e8b446097120ad4ea9ec0
 U
 %src/test/java/tasks/FootballTest.java,c\3\c312833b38304b234360fbc7f45d8e7f42743552
+Q
+!src/main/java/tasks/Keymaker.java,d\c\dc140fb498bfc13ded36230e35e2537ed1b35d72
+U
+%src/test/java/tasks/KeymakerTest.java,3\5\3567943763be3efe08316d7729ee0d81e7ea3b2a

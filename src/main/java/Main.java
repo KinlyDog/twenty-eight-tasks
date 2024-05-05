@@ -80,6 +80,5 @@ public class Main {
 //
 //        System.out.println(Arrays.toString(hs.toArray()));
 
-        System.out.println(Character.getNumericValue(47));
     }
 }
