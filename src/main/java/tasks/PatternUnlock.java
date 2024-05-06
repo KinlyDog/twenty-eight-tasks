@@ -2,13 +2,12 @@ package tasks;
 
 public class PatternUnlock {
     public static String patternUnlock(int n, int[] hits) {
-
         String defaultSeq = "619528437";
         StringBuilder correctSeq = new StringBuilder();
 
         for (int hit : hits) {
             for (int j = 0; j < defaultSeq.length(); j++) {
-                if (String.valueOf(hit).equals(defaultSeq.charAt(j))) {
+                if (Character.forDigit(hit, 10) == defaultSeq.charAt(j)) {
                     correctSeq.append(j);
                     break;
                 }
@@ -27,13 +26,11 @@ public class PatternUnlock {
             }
         }
 
-        int modifiedCode = (int)Math.round(digitalCode * 100000);
+        int modifiedCode = (int) Math.round(digitalCode * 100000);
         StringBuilder withoutZero = new StringBuilder(String.valueOf(modifiedCode));
 
-        for (int i = 0; i < withoutZero.length(); i++) {
-            if (withoutZero.charAt(i) == '0') {
-                withoutZero.deleteCharAt(i);
-            }
+        while (withoutZero.indexOf("0") > 0) {
+            withoutZero.deleteCharAt(withoutZero.indexOf("0"));
         }
 
         return withoutZero.toString();
