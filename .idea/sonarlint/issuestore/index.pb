@@ -130,3 +130,5 @@ U
 %src/test/java/tasks/SquirrelTest.java,3\1\318c7e220d27cfb5b59a6350ee33d6d7f132eb99
 U
 %src/test/java/tasks/OdometerTest.java,8\5\8540b6d2dfd2a19d36013b5ad899ed0baecb2105
+]
+-src/test/java/tasks/ConquestCampaignTest.java,2\8\28dee9cd3996d2cbb6a1bd087204364ae0335058
