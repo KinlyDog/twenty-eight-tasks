@@ -134,3 +134,5 @@ U
 -src/test/java/tasks/ConquestCampaignTest.java,2\8\28dee9cd3996d2cbb6a1bd087204364ae0335058
 S
 #src/test/java/tasks/MadMaxTest.java,4\8\485bc6495c37facb0e902372de7b86242b29db19
+`
+0src/test/java/tasks/SynchronizingTablesTest.java,4\3\43ea0211625c42de28a0e18f2aaa993c478010d8
