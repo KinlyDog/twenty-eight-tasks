@@ -138,3 +138,5 @@ S
 0src/test/java/tasks/SynchronizingTablesTest.java,4\3\43ea0211625c42de28a0e18f2aaa993c478010d8
 Z
 *src/test/java/tasks/PatternUnlockTest.java,e\9\e9af06530009dda98e290c50ede926ee302ce444
+W
+'src/test/java/tasks/WordSearchTest.java,c\2\c267b6128f3eb625456021e22e7c175fcc9bf73a
