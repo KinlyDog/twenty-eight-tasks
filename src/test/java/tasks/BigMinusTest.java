@@ -2,6 +2,8 @@ package tasks;
 
 import org.junit.jupiter.api.Test;
 
+import java.math.BigInteger;
+
 import static org.junit.jupiter.api.Assertions.*;
 import static tasks.BigMinus.*;
 
@@ -13,8 +15,7 @@ class BigMinusTest {
         String secondNumber = "5";
         String expectedNumber = "12340";
 
-
-        assertEquals("12340", bigMinus(firstNumber, secondNumber));
+        assertEquals(expectedNumber, bigMinus(firstNumber, secondNumber));
     }
 
     @Test
