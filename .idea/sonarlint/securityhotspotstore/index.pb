@@ -132,3 +132,5 @@ U
 %src/test/java/tasks/OdometerTest.java,8\5\8540b6d2dfd2a19d36013b5ad899ed0baecb2105
 ]
 -src/test/java/tasks/ConquestCampaignTest.java,2\8\28dee9cd3996d2cbb6a1bd087204364ae0335058
+S
+#src/test/java/tasks/MadMaxTest.java,4\8\485bc6495c37facb0e902372de7b86242b29db19
