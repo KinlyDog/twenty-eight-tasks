@@ -140,3 +140,5 @@ Z
 *src/test/java/tasks/PatternUnlockTest.java,e\9\e9af06530009dda98e290c50ede926ee302ce444
 W
 'src/test/java/tasks/WordSearchTest.java,c\2\c267b6128f3eb625456021e22e7c175fcc9bf73a
+U
+%src/test/java/tasks/SumOfTheTest.java,a\3\a3f0f8c347ec582ca65f9a4de224d4e2be15a6c0
