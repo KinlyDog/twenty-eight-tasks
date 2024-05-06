@@ -142,3 +142,5 @@ W
 'src/test/java/tasks/WordSearchTest.java,c\2\c267b6128f3eb625456021e22e7c175fcc9bf73a
 U
 %src/test/java/tasks/SumOfTheTest.java,a\3\a3f0f8c347ec582ca65f9a4de224d4e2be15a6c0
+[
++src/test/java/tasks/TheRabbitsFootTest.java,8\0\80d06e2aaeafcf18dd7463c36a95f6dbc1333ec4
