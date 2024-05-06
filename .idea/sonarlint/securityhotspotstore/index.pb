@@ -144,3 +144,5 @@ U
 %src/test/java/tasks/SumOfTheTest.java,a\3\a3f0f8c347ec582ca65f9a4de224d4e2be15a6c0
 [
 +src/test/java/tasks/TheRabbitsFootTest.java,8\0\80d06e2aaeafcf18dd7463c36a95f6dbc1333ec4
+Z
+*src/test/java/tasks/PrintingCostsTest.java,d\d\ddbeaf6dfe6e2ad7be5441f2234bbbe754153b29
