@@ -146,3 +146,5 @@ U
 +src/test/java/tasks/TheRabbitsFootTest.java,8\0\80d06e2aaeafcf18dd7463c36a95f6dbc1333ec4
 Z
 *src/test/java/tasks/PrintingCostsTest.java,d\d\ddbeaf6dfe6e2ad7be5441f2234bbbe754153b29
+U
+%src/test/java/tasks/BigMinusTest.java,7\9\79f6c5eb5d8ef8f426386ab5b23f319cdff4748c
