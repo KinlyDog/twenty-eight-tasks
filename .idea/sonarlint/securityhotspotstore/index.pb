@@ -126,3 +126,7 @@ Q
 !src/main/java/tasks/Keymaker.java,d\c\dc140fb498bfc13ded36230e35e2537ed1b35d72
 U
 %src/test/java/tasks/KeymakerTest.java,3\5\3567943763be3efe08316d7729ee0d81e7ea3b2a
+U
+%src/test/java/tasks/SquirrelTest.java,3\1\318c7e220d27cfb5b59a6350ee33d6d7f132eb99
+U
+%src/test/java/tasks/OdometerTest.java,8\5\8540b6d2dfd2a19d36013b5ad899ed0baecb2105
