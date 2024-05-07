@@ -1,4 +1,4 @@
-Modeling data structures and algorithms for working with them from my Java course.<br/>
+Solving 28 problems from my Java course.<br/>
 Reinforcing the basics.<br/>
-Started 07 May 2024.<br/>
-Not completed.
+Started 09 Mar 2024.<br/>
+Completed 06 May 2024.
